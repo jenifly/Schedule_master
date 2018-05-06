@@ -3,6 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="minorTextColor">#a9a9a9</color>
+    <color name="solarTextColor">#fff</color>
+    <color name="lunarTextColor">#B2B2B2</color>
+    <color name="hintColor">#999999</color>
+    <color name="selectCircleColor">#39AF81</color>
+    <color name="holidayColor">#39AF81</color>
+    <color name="workdayColor">#EC7230</color>
+    <color name="pointColor">#B2B2B2</color>
+    <color name="white">#ffffff</color>
 
-    <color name="white">#fff</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="indigo">#4B0082</color>
+    <color name="purple">#800880</color>
+
+    <color name="bgCalenderTitle">#2888</color>
+    <color name="bgCalenderCenter">#2000</color>
+    <color name="bgCalenderItemRight">#9999</color>
+    <color name="bgCalenderItemLeft">#594691</color>
+    <color name="bgBackSideColor">#f4f0ff</color>
+    <color name="contentDividerLine">#32e0e0e0</color>
+    <color name="btnRequest">#ffbf12</color>
+
+    <color name="titleBadgeTitle">#adafb1</color>
 </resources>

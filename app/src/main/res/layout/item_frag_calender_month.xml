@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_frag_calendar_month_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/bgCalenderCenter">
+
+            <ImageView
+                android:id="@+id/item_frag_calendar_month_tagcolor"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:tint="@color/orange"
+                android:src="@drawable/view_oval"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/fc_item_time"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="23:55  PM"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title_from_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:singleLine="true"
+                    android:text="测试文字"
+                    android:textColor="@color/lunarTextColor"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/fc_item_hourglass"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/icon_hourglass"
+                    android:layout_marginRight="2dp"
+                    android:paddingTop="1dp"
+                    android:tint="@color/minorTextColor"/>
+                <TextView
+                    android:id="@+id/abcss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/minorTextColor"
+                    android:text="06:22"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_frag_calendar_month_titleDividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="2dp"
+            android:src="@color/contentDividerLine"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_frag_calendar_month_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="6dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TitleBadgeTitle"
+                    android:text="@string/repeat_times" />
+                <TextView
+                    android:id="@+id/title_requests_count"
+                    style="@style/TitleBadgeText"
+                    android:textStyle="bold"
+                    android:text="每日" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:src="@color/contentDividerLine" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TitleBadgeTitle"
+                    android:text="@string/is_it_ringing" />
+                <TextView
+                    android:id="@+id/title_pledge"
+                    android:textStyle="bold"
+                    style="@style/TitleBadgeText"
+                    android:text="是" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:src="@color/contentDividerLine" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TitleBadgeTitle"
+                    android:text="@string/importance" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView style="@style/fc_item_star" />
+                    <ImageView style="@style/fc_item_star" />
+                    <ImageView style="@style/fc_item_star" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <!-- avatar and name part -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/content_avatar_title"
+                    style="@style/ContentMainBadgeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="5dp"
+                    android:text="创建时间" />
+
+                <TextView
+                    android:id="@+id/content_name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_avatar_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="2018年2月25日02:15"
+                    android:textColor="@color/minorTextColor"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <!-- addresses part -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/content_from_badge"
+                    style="@style/ContentMainBadgeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="说明" />
+
+                <TextView
+                    android:id="@+id/content_from_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="测试文字测试文字测试文字测试文字测试文字，测试文字，测试文字测试文字测试文字，测试文字测试文字。"
+                    android:textColor="@color/minorTextColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- dates part -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_delivery_date_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="执行时间" />
+
+                    <TextView
+                        android:id="@+id/content_delivery_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/content_delivery_date_badge"
+                        android:layout_alignStart="@id/content_delivery_date_badge"
+                        android:layout_below="@id/content_delivery_date_badge"
+                        android:text="每天 16:22"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/minorTextColor"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_deadline_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="铃声" />
+
+                    <TextView
+                        android:id="@+id/content_deadline_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_alignStart="@id/content_deadline_badge"
+                        android:layout_below="@id/content_deadline_badge"
+                        android:text="自定义铃声3"
+                        android:textColor="@color/minorTextColor"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/content_request_btn"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/btnRequest"
+                android:text="编 辑"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/mainTextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="这个闹钟事件一共执行过6666次"
+                android:gravity="center"
+                android:textColor="@color/minorTextColor"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:elevation="2dp"
+        android:src="@color/contentDividerLine"/>
+</LinearLayout>

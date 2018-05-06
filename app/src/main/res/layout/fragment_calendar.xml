@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bgCalenderCenter">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="32dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="2月"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018年"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="34dp"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/icon_date"
+                        android:tint="@color/white"/>
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:paddingTop="9dp"
+                        android:layout_width="16dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:text="25"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="日" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="一" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="二" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="三" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="四" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="五" />
+                <TextView
+                    style="@style/calender_tv_week"
+                    android:text="六" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.jenifly.schedule_master.view.calendar.calendar.NCalendar
+            android:id="@+id/ncalendarrrr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:firstDayOfWeek="Sunday">
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@color/bgCalenderTitle"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:paddingLeft="10dp"
+                android:text="今天  农历  一月(正月)初十"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.jenifly.schedule_master.view.calendar.calendar.NCalendar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frag_calendar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/caldendar_menu">
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="36dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_add"
+                android:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新建活动"
+                android:textColor="@color/white"
+                android:textSize="10sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="36dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_schedule"
+                android:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周"
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="36dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_schedule"
+                android:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日"
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="36dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_schedule"
+                android:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日程"
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

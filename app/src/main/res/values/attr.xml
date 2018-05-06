@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BlurredView">
+        <attr name="src" format="reference"/>
+        <attr name="move" format="boolean"/>
+        <attr name="disableBlurred" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="NCalendar">
+        <attr name="solarTextColor" format="color" />
+        <attr name="lunarTextColor" format="color" />
+        <attr name="hintColor" format="color" />
+        <attr name="selectCircleColor" format="color" />
+        <attr name="solarTextSize" format="dimension" />
+        <attr name="lunarTextSize" format="dimension" />
+        <attr name="selectCircleRadius" format="dimension" />
+        <attr name="isShowLunar" format="boolean" />
+
+        <attr name="pointSize" format="dimension" />
+        <attr name="pointColor" format="color" />
+        <attr name="hollowCircleColor" format="color" />
+        <attr name="hollowCircleStroke" format="dimension" />
+        <attr name="startDate" format="string" />
+        <attr name="endDate" format="string" />
+
+        <attr name="calendarHeight" format="dimension"/>
+        <attr name="duration" format="integer"/>
+
+        <attr name="firstDayOfWeek" format="string"/>
+        <attr name="defaultCalendar" format="string"/>
+
+        <attr name="isShowHoliday" format="boolean" />
+        <attr name="holidayColor" format="color" />
+        <attr name="workdayColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiChoicesCircleButton">
+        <attr name="mccb_icon" format="reference"/>
+        <attr name="mccb_enableParallax" format="boolean"/>
+        <attr name="mccb_collapseRadius" format="dimension"/>
+        <attr name="mccb_expandRadius" format="dimension"/>
+        <attr name="mccb_text" format="string"/>
+        <attr name="mccb_textSize" format="dimension"/>
+        <attr name="mccb_textColor" format="color"/>
+        <attr name="mccb_buttonColor" format="color"/>
+        <attr name="mccb_duration" format="integer"/>
+        <attr name="mccb_itemRadius" format="dimension"/>
+        <attr name="mccb_itemDistanceToCentre" format="dimension"/>
+        <attr name="mccb_itemBackgroundColor" format="color"/>
+        <attr name="mccb_showBackgroundShadow" format="boolean"/>
+        <attr name="mccb_backgroundShadowColor" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="FoldingCell">
+        <attr name="backSideColor" format="color" />
+        <attr name="animationDuration" format="integer" />
+        <attr name="additionalFlipsCount" format="integer" />
+        <attr name="cameraHeight" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,44 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_page"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.jenifly.schedule_master.MainActivity">
-    <ImageView
-        android:id="@+id/main_bgiv"
+    android:layout_height="match_parent">
+
+    <com.jenifly.schedule_master.view.blurredview.BlurredView
+        android:id="@+id/yahooweather_blurredview"
+        app:src="@mipmap/bg_test_001"
+        app:move="true"
+        app:disableBlurred="false"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/bg_test_002"
-        android:scaleType="fitXY"/>
-    <RelativeLayout
-        android:id="@+id/mian_titlebar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/main_title_bg"
+        android:layout_height="match_parent"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@mipmap/bg_test_001"
-            android:scaleType="fitXY"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:gravity="center"
-            android:textSize="16dp"
-            android:background="@drawable/tiltle_bg"
-            android:textColor="@color/white"
-            android:text="今日日程"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/tiltle_bottom_bg"
-            android:layout_above="@+id/main_timeline_bg"/>
-        <com.jenifly.schedule_master.view.BlurringView
-            android:layout_below="@+id/main_title_bg"
-            android:id="@+id/main_timeline_bg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:overScrollMode="never" />
 
 </RelativeLayout>
